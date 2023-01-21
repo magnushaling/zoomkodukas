@@ -6,6 +6,8 @@ body {
   font-size: 16px;
   color: #222;
   font-weight: 300;
+  background-image: url(taust.jpg);
+  background-size: cover;
 }
 
 #registeeru-kast {
