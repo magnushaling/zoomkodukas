@@ -1,72 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+    font-size: 14px;
+}
 
-.konteiner {
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.paiskonteiner {
     width: 100%;
     height: 778px;
-    background-image: url(./pildid/Hills.png);
+    background-image: url('./pildid/Hills.png');
     background-position: center;
     background-size: cover;
 }
 
-.nimi {
+.paiserida {
+    display: flex;
+    align-items: center;
+}
+
+.pais-logoala {
+    display: flex;
+}
+
+.pais-logo {
+    height: 64px;
+    width: 66px;
+}
+
+.pais-nimi {
     letter-spacing: 0px;
     color: #0B0B0B;
-    font-size: 23px;
+    font-weight: 700;
+    font-size: 33px;
     line-height: 33px;
     text-transform: uppercase;
     width: 100px;
-    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif; 
-    font-weight: 800;
-    text-align: left; 
-
-
 }
 
-.vasakpool {
+.pais-menyy {
     display: flex;
-    position: relative;
-    margin-left: 37px;
-    top: 40px;
-
+    font-family: 'Montserrat', sans-serif;
+	font-size: 1.19rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2.67px;
+    margin-left: auto
 }
 
-.logo {
-    float: left;
-    height: 64px;
-    width: 66px;
-
-}
-
-.navlist {
-    float: right;
-
-}
-
-li {
-    display: inline;
+.pais-menyy ul {
     list-style-type: none;
-    padding: 0px 50px 0px 0px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-a {
+.pais-menyy li {
+    padding: 0px;
+    margin-left: 10px;
+    min-width: 100px;
+}
+
+.pais-menyy a {
     color: #0B0B0B;
-    font-size: 16.67px;
-    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.pealkiri_pilt {
+    display: none;
+}
+
+.rida {
+    display: flex;
+}
+
+.liblikas1 {
+    width: 75.27px;
+    height: 66.04px;
+    margin-top: -40px;
+    margin-left: auto;
+}
+
+.liblikas2 {
+    width: 60px;
+    height: 32px;
+    margin-left: -60px;
+}
+
+.pealkiri-kastid {
+    padding-top: 40px;
+}
+
+.pealkiri-kastid h2 {
+    font-size: 2.83rem;
     font-weight: 800;
-    letter-spacing: 2.67px;
     text-transform: uppercase;
-    text-align: left;
-    line-height: 20px;
 }
 
-@media (min-width: 1500px) {
-    .konteiner {
-	    background-image: url(./pildid/Hills@2x.png);
-   }
+.pealkiri-kastid h1 {
+    font-size: 4.31rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
-@media (max-width: 1499px) {
-    .konteiner {
-	    background-image: url(./pildid/Hills.png);
-   }
+
+@media screen and (min-width: 768px) {
+    .pealkiri_pilt {
+        display: block;
+    }
+
+    .pealkiri-kastid {
+        padding-top: 230px;
+    }
+}
+
+.nupp {
+    background-color: #0B0B0B;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 2.25px;
+    color: white;
+    height: 58px;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.naine {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.vari {
+    margin-top: -40px;
+    margin-left: -152px;
 }
