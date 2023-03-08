@@ -1,0 +1,36 @@
+.card-text2 {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(247, 247, 247)
+}
+
+.btn  {
+    width: auto;
+
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+}
+
+.copyright {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    line-height: 40px;
+    font-size: 15px;
+    text-align: center;
+    bottom:0;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+
+#nupp {
+    background-color: green;
+}
