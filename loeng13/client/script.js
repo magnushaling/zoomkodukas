@@ -45,7 +45,7 @@ loadTodos();
 
 async function toggleTodo(todoId) {
   console.log(todoId)
-  const response = await fetch('http://localhost:8081', {
+  const response = await fetch('https://expressjs-postgres-production-9351.up.railway.app/', {
     method: 'POST',
     headers: {
       "Content-Type": "application/json",
@@ -64,7 +64,7 @@ async function toggleTodo(todoId) {
 
 
 async function deleteTodo(todoId) {
-  const response = await fetch('http://localhost:8081', {
+  const response = await fetch('https://expressjs-postgres-production-9351.up.railway.app/', {
     method: 'DELETE',
     headers: {
       "Content-Type": "application/json",
