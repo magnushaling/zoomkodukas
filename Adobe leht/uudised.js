@@ -41,3 +41,14 @@ for (let matk of matkad) {
 }
 
 document.getElementById('valjund').innerHTML = koikMatkadHTML
+
+const API_URL = 'https://expressjs-postgres-production-c512.up.railway.app/treks';
+
+
+async function getTreks() {
+    const treks = await fetch(`${API_URL}/treks`).then((response) => response.json())
+    console.log(treks);
+}
+
+
+

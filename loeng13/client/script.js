@@ -50,7 +50,7 @@ async function toggleTodo(todoId) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ todoId })
+    body: JSON.stringify({ id: todoIdToToggle })
   });
 
 
@@ -69,7 +69,7 @@ async function deleteTodo(todoId) {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ todoId})
+    body: JSON.stringify({ id: todoId})
   });
 
 
