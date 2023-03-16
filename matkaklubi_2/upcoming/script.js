@@ -1,4 +1,4 @@
-const API_URL = 'https://expressjs-postgres-production-f05d.up.railway.app';
+const API_URL = 'https://expressjs-postgres-production-c512.up.railway.app/';
 const sisu = document.querySelector('.sisu');
 
 async function getTreks() {
