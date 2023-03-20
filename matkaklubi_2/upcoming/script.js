@@ -15,12 +15,24 @@ async function getTreks() {
         <div class="content">
           <h3>${trek.title}</h3>
           <p>${trek.description}</p>
-          <button onclick="signUp(${trek.id})">Registreeri</button>
+          <button onclick="signUp(${trek})">Registreeri</button>
         </div>
       </div>
     `;
   }
 
 };
+
+async function signUp(trek) {
+  const treks = await fetch(`${API_URL}/treks/${trekId}`).then(response => response.jason());
+  sisu.innerHTML = `
+  <div class="registration">
+    Registreerumine matkale "${trek.title}"
+    <button onclick="getTreks()">Tagasi</button>
+  </div>
+  `;
+}
+
+
 
 getTreks();

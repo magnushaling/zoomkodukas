@@ -1,4 +1,4 @@
-const API_URL = 'https://expressjs-postgres-production-c512.up.railway.app';
+const API_URL = 'https://expressjs-postgres-production-c512.up.railway.app'
 const sisu = document.querySelector('.matkad');
 const detail = document.querySelector('.detail');
 const lisa = document.querySelector('.lisa');
@@ -81,35 +81,60 @@ async function saveTrekDetails() {
 }
 
 
-async function addTrekDetails(id) {
+function addTrekDetails(id) {
   lisa.innerHTML = `
-  
   <div class="lahter">
     <label for="pealkiri">Pealkiri</label>
-    <input id="pealkiri" value="" />
+    <input id="pealkiri2" value="" />
   </div>
   <div class="lahter">
     <label for="kirjeldus">Kirjeldus</label>
-    <input id="kirjeldus" value="" />
+    <input id="kirjeldus2" value="" />
   </div>
   <div class="lahter">
     <label for="pildiUrl">Pildi URL</label>
-    <input id="pildiUrl" value="" />
+    <input id="pildiUrl2" value="" />
   </div>
   <div class="lahter">
     <label for="kestvus">Kestvus</label>
-    <input id="kestvus" value="
+    <input id="kestvus2" value="" />
     <div class="lahter">
     <label for="staatus">Staatus</label>
-    <select id="staatus">
+    <select id="staatus2">
       <option value="COMPLETED">COMPLETED</option>
       <option value="REGISTRATION_OPEN">REGISTRATION_OPEN</option>
       <option value="IN_PROGRESS">IN_PROGRESS</option>
       <option value="DRAFT">DRAFT</option>
     </select>
   </div>
-  <button onclick="addTrekDetails()">Lisa</button>
+  <button onclick="createTrek()">Lisa</button>
   `;
+  }
+
+
+  async function createTrek() {
+    const pealkiri = document.querySelector('#pealkiri2').value;
+    const kirjeldus = document.querySelector('#kirjeldus2').value;
+    const pildiUrl = document.querySelector('#pildiUrl2').value;
+    const kestvus = document.querySelector('#kestvus2').value;
+    const staatus =  document.querySelector('#staatus2').value;
+  
+    const response = await fetch(`${API_URL}/treks`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: pealkiri,
+        description: kirjeldus,
+        image_url: pildiUrl,
+        duration: kestvus,
+        status: staatus
+      })
+    }).then((response) => response.json());
+  
+    console.log(response);
+    getTreks();
   }
 
 getTreks();
